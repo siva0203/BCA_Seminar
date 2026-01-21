@@ -45,16 +45,19 @@ filter:blur(40px);
 /* INTERACTIVE GLOW */
 .glow-follow{
 position:fixed;
-width:250px;
-height:250px;
+width:260px;
+height:260px;
 border-radius:50%;
-background:radial-gradient(circle,
-#facc1555,
-#38bdf855,
-transparent 60%);
+background:
+radial-gradient(circle,
+#00f5ff,
+#00ff9d,
+#7c3aed,
+transparent 65%);
 pointer-events:none;
 z-index:-1;
 transform:translate(-50%,-50%);
+filter:blur(25px) brightness(1.5);
 transition:.05s;
 }
 /* GLASS */
@@ -179,5 +182,6 @@ animation:move 12s linear infinite;
 0%{transform:translateY(100vh)}
 100%{transform:translateY(-10vh)}
 }
+
 
 
