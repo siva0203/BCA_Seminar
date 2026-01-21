@@ -60,6 +60,19 @@ transform:translate(-50%,-50%);
 filter:blur(25px) brightness(1.5);
 transition:.05s;
 }
+
+.glow-follow::after{
+content:'';
+position:absolute;
+inset:0;
+border-radius:50%;
+background:
+radial-gradient(circle,
+#00f5ff,
+transparent 60%);
+filter:blur(40px);
+}
+
 /* GLASS */
 .glass{
 background:linear-gradient(135deg,
@@ -182,6 +195,7 @@ animation:move 12s linear infinite;
 0%{transform:translateY(100vh)}
 100%{transform:translateY(-10vh)}
 }
+
 
 
 
