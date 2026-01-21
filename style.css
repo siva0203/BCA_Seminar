@@ -53,7 +53,7 @@ radial-gradient(circle,
 #00f5ff,
 #00ff9d,
 #7c3aed,
-transparent 85%);
+transparent 95%);
 pointer-events:none;
 z-index:-1;
 transform:translate(-50%,-50%);
@@ -195,6 +195,7 @@ animation:move 12s linear infinite;
 0%{transform:translateY(100vh)}
 100%{transform:translateY(-10vh)}
 }
+
 
 
 
