@@ -16,24 +16,46 @@
 
 /* COLORFUL BG */
 
+/* AURORA BACKGROUND */
 body{
 font-family:'Plus Jakarta Sans',sans-serif;
-background:linear-gradient(-45deg,
-#020617,
-#1e293b,
-#312e81,
-#7c3aed,
-#ec4899);
-background-size:400% 400%;
-animation:bgMove 12s ease infinite;
+background:#020617;
 color:#f8fafc;
 min-height:100vh;
+overflow-x:hidden;
 }
 
-@keyframes bgMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+.aurora{
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+radial-gradient(circle at 20% 30%, #38bdf855, transparent 40%),
+radial-gradient(circle at 80% 20%, #a855f755, transparent 40%),
+radial-gradient(circle at 50% 70%, #ec489955, transparent 45%);
+animation:auroraMove 15s ease-in-out infinite alternate;
+filter:blur(40px);
+}
+
+@keyframes auroraMove{
+0%{transform:translate(0,0) scale(1)}
+100%{transform:translate(-40px,30px) scale(1.1)}
+}
+
+/* INTERACTIVE GLOW */
+.glow-follow{
+position:fixed;
+width:250px;
+height:250px;
+border-radius:50%;
+background:radial-gradient(circle,
+#facc1555,
+#38bdf855,
+transparent 60%);
+pointer-events:none;
+z-index:-1;
+transform:translate(-50%,-50%);
+transition:.05s;
 }
 /* GLASS */
 .glass{
@@ -157,4 +179,5 @@ animation:move 12s linear infinite;
 0%{transform:translateY(100vh)}
 100%{transform:translateY(-10vh)}
 }
+
 
