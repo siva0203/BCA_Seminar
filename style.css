@@ -15,18 +15,26 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 /* COLORFUL BG */
+
 body{
 font-family:'Plus Jakarta Sans',sans-serif;
-background:linear-gradient(135deg,
-#0f172a,
+background:linear-gradient(-45deg,
+#020617,
 #1e293b,
 #312e81,
-#4c1d95,
-#7e22ce);
+#7c3aed,
+#ec4899);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
 color:#f8fafc;
 min-height:100vh;
 }
 
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
 /* GLASS */
 .glass{
 background:linear-gradient(135deg,
@@ -149,3 +157,4 @@ animation:move 12s linear infinite;
 0%{transform:translateY(100vh)}
 100%{transform:translateY(-10vh)}
 }
+
