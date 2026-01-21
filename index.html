@@ -201,8 +201,24 @@ BCA Department Association
 <!-- Animated Particles -->
 <div class="aurora"></div>
 <div class="glow-follow" id="glow"></div>
+
+<script>
+const glow = document.getElementById("glow");
+
+document.addEventListener("mousemove", e=>{
+glow.style.left = e.clientX+"px";
+glow.style.top = e.clientY+"px";
+});
+
+document.addEventListener("touchmove", e=>{
+glow.style.left = e.touches[0].clientX+"px";
+glow.style.top = e.touches[0].clientY+"px";
+});
+</script>
+    
 </body>
 </html>
+
 
 
 
