@@ -1,0 +1,166 @@
+/* =========================
+   PHASE 1: FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+/* =========================
+   PHASE 2: COLORS
+========================= */
+:root{
+--blue:#0ea5e9;
+--purple:#8b5cf6;
+--pink:#ec4899;
+--green:#22c55e;
+--orange:#f97316;
+--dark1:#020617;
+--dark2:#02091f;
+--glass:rgba(15,23,42,.65);
+}
+
+/* =========================
+   PHASE 3: RESET
+========================= */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* =========================
+   PHASE 4: BODY BG
+========================= */
+body{
+font-family:'Plus Jakarta Sans',sans-serif;
+background:linear-gradient(180deg,var(--dark1),var(--dark2));
+color:#f8fafc;
+overflow-x:hidden;
+}
+
+/* =========================
+   PHASE 5: GLASS
+========================= */
+.glass{
+background:var(--glass);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.12);
+}
+
+/* =========================
+   PHASE 6: TEXT FX
+========================= */
+.glow-text{
+text-shadow:0 0 12px var(--blue);
+}
+
+.gradient-text{
+background:linear-gradient(135deg,
+var(--blue),
+var(--purple),
+var(--pink));
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* =========================
+   PHASE 7: LOGO BOX
+========================= */
+.logo{
+width:52px;
+height:52px;
+border-radius:14px;
+background:#0f172a;
+padding:6px;
+border:1px solid #334155;
+}
+
+/* =========================
+   PHASE 8: UI
+========================= */
+.badge{
+font-size:10px;
+padding:6px 14px;
+border-radius:20px;
+background:#0ea5e922;
+}
+
+.section-head{
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#94a3b8;
+margin-bottom:8px;
+}
+
+.quote{
+font-size:16px;
+font-weight:600;
+margin:10px 0;
+}
+
+/* =========================
+   PHASE 9: HIGHLIGHTS
+========================= */
+.card{
+padding:12px;
+border-radius:14px;
+font-size:12px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+/* individual colors */
+.card.blue{background:#0ea5e933;border-left:4px solid var(--blue)}
+.card.purple{background:#8b5cf633;border-left:4px solid var(--purple)}
+.card.pink{background:#ec489933;border-left:4px solid var(--pink)}
+.card.green{background:#22c55e33;border-left:4px solid var(--green)}
+
+/* =========================
+   PHASE 10: TIMELINE
+========================= */
+.timeline{
+border-left:3px solid var(--purple);
+padding-left:15px;
+}
+
+/* =========================
+   PHASE 11: BUTTONS
+========================= */
+.btn{
+flex:1;
+padding:10px;
+border-radius:12px;
+font-size:12px;
+background:#1e293b;
+}
+
+.primary{
+background:linear-gradient(135deg,
+var(--blue),
+var(--purple));
+}
+
+/* =========================
+   PHASE 12: QR
+========================= */
+.qr{
+width:150px;
+margin:auto;
+border-radius:12px;
+background:white;
+padding:6px;
+}
+
+/* =========================
+   PHASE 13: PARTICLES
+========================= */
+.particle{
+position:fixed;
+width:5px;
+height:5px;
+background:var(--blue);
+border-radius:50%;
+opacity:.2;
+animation:move 10s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translateY(100vh)}
+100%{transform:translateY(-10vh)}
+}
