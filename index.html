@@ -210,7 +210,12 @@ Product Engineer
     </div>
 
     <div class="mb-3">
-      <span class="text-xs text-orange-400">11:15 AM</span>
+      <span class="text-xs text-yellow-400">11:15 AM</span>
+      <h5>Quiz Game</h5>
+    </div>
+
+    <div class="mb-3">
+      <span class="text-xs text-orange-400">11:30 AM</span>
       <h5>Technical Session I</h5>
       <p>
         <strong>How Artificial Intelligence Works in Real-World Business Applications</strong><br>
@@ -245,7 +250,9 @@ HOD - Dept. of Computer Application
 
 <div class="flex gap-3 mt-3">
 <a href="tel:9659414498" class="btn">Call</a>
-<button class="btn primary">Share</button>
+<button class="btn primary" onclick="shareInvite()">
+  <i class="fas fa-share-alt"></i> Share
+</button>
 </div>
 </section>
 
@@ -272,6 +279,29 @@ document.addEventListener("touchmove", e=>{
 glow.style.left = e.touches[0].clientX+"px";
 glow.style.top = e.touches[0].clientY+"px";
 });
+
+<script>
+function shareInvite() {
+  const shareData = {
+    title: "BCA Seminar – How AI Works in Real World",
+    text: "You're invited to the BCA Seminar on How AI Works in Real World 🌐🤖",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData)
+      .then(() => console.log("Shared successfully"))
+      .catch(err => console.log("Share failed:", err));
+  } else {
+    // Fallback: copy link
+    navigator.clipboard.writeText(window.location.href)
+      .then(() => alert("Invitation link copied! Share it anywhere 📋"))
+      .catch(() => alert("Unable to copy link"));
+  }
+}
+</script>
+
+
 </script>
     
 </body>
